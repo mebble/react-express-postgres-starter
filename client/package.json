@@ -1,0 +1,14 @@
+{
+  "name": "react-express-postgres-starter-client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

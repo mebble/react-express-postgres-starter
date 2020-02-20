@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# development
+.cache/
+dist/
+
+# production
+build/
+
+# environment
+.env
+
+# misc
+.DS_Store
