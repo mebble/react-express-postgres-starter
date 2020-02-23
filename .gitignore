@@ -3,10 +3,10 @@ node_modules/
 
 # development
 .cache/
-dist/
+.parcel-cache/
 
 # production
-build/
+dist/
 
 # environment
 .env

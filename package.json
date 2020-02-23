@@ -2,8 +2,21 @@
   "name": "react-express-postgres-starter",
   "version": "1.0.0",
   "description": "Boilerplate code for a React + Express + PostgreSQL project",
+  "private": true,
   "scripts": {
-    "install:dependencies": ""
+    "install:dependencies": "run-p install:dependencies:*",
+    "install:dependencies:root": "npm install",
+    "install:dependencies:client": "cd client && npm install",
+    "install:dependencies:server": "cd server && npm install",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build:client": "cd client && npm run build",
+    "start:server": "cd server && npm run start",
+    "start:prod": "run-s clean build:client start:server",
+    "clean": "run-p clean:*",
+    "clean:root": "rm -rf dist",
+    "clean:client": "cd client && npm run clean",
+    "clean:server": "cd server && npm run clean"
   },
   "repository": {
     "type": "git",
@@ -20,7 +33,6 @@
   },
   "homepage": "https://github.com/mebble/react-express-postgres-starter#readme",
   "devDependencies": {
-    "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5"
   }
 }

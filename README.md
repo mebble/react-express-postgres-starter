@@ -25,6 +25,49 @@ The top-level build scripts should be written cleanly by using `npm-run-all`. Th
 
 ## Setup for Development
 
+Install dependencies
 
+```sh
+$ npm run install:dependencies
+```
 
-## Building and Running
+### Developing
+
+In one terminal
+
+```sh
+$ npm run dev:client
+```
+
+In a separate terminal
+
+```sh
+$ npm run dev:server
+```
+
+### Testing
+
+...
+
+### Building and Running
+
+Only the client needs to be built. Its built files are then served as static files by the server.
+
+```sh
+$ npm run build:client
+$ npm run start:server
+```
+
+This script will clean before building and running the app. Recommended to use in production.
+
+```sh
+$ npm run start:prod
+```
+
+### Cleaning
+
+This will run the clean script for all parts of the project, i.e. the root, client and server directories.
+
+```sh
+$ npm run clean
+```
