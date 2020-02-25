@@ -8,6 +8,7 @@ const app = express();
 app.use('/', express.static(staticPath));
 
 app.get('/api', (req, res) => {
+    console.log('GET /api');
     res.send('Hello, world!');
 });
 
